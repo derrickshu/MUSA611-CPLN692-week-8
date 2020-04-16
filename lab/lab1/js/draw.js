@@ -116,7 +116,7 @@ map.on('draw:created', function (e) {
     map.addLayer(myRectangle)
 
     myRectangles.push(myRectangle);
-
+// Task 5. Store multiple shapes
     var jhtml = $.parseHTML(`<div class = "shape" data-leaflet-id=${id}><h1>Current ID: ${id}</h1></div>`)
     $('#shapes').append(jhtml)
 
@@ -146,7 +146,7 @@ map.on('draw:created', function (e) {
       };
     })
 
-    ayer.on("mouseout", function(e) {
+    layer.on("mouseout", function(e) {
       $(`div[data-leaflet-id=${e.target._leaflet_id}]`).css("background-color", "#ffffff");
     });
     layer.on("mouseover", function(e) {
